@@ -79,7 +79,8 @@ snippet eif
 snippet if
 	if (${1}) ${0}
 snippet sw
-	switch (${1}) {
+	switch (${1})
+	{
 		${0}
 	}
 ##
@@ -106,13 +107,15 @@ snippet d.st
 ##
 ## Singleton Pattern
 snippet singlet
-	private static class Holder {
+	private static class Holder
+	{
 		private static final ${1:`vim_snippets#Filename("$1")`} INSTANCE = new $1();
 	}
 
 	private $1() { }
 
-	public static $1 getInstance() {
+	public static $1 getInstance()
+	{
 		return Holder.INSTANCE;
 	}
 ##
@@ -162,15 +165,20 @@ snippet thr
 snippet ths
 	throws ${0}
 snippet try
-	try {
+	try
+	{
 		${0:${VISUAL}}
-	} catch(${1:Exception} ${2:e}) {
+	} catch(${1:Exception} ${2:e})
+	{
 	}
 snippet tryf
-	try {
+	try
+	{
 		${0:${VISUAL}}
-	} catch(${1:Exception} ${2:e}) {
-	} finally {
+	} catch(${1:Exception} ${2:e})
+	{
+	} finally
+	{
 	}
 ##
 ## Find Methods
@@ -215,11 +223,13 @@ snippet wh
 ##
 ## Main method
 snippet psvm
-	public static void main (String[] args) {
+	public static void main (String[] args)
+	{
 		${0}
 	}
 snippet main
-	public static void main (String[] args) {
+	public static void main (String[] args)
+	{
 		${0}
 	}
 ##
@@ -251,11 +261,13 @@ snippet renx
 ##
 ## Setter and Getter Methods
 snippet set
-	${1:public} void set${3:}(${2:String} ${0:}){
+	${1:public} void set${3:}(${2:String} ${0:})
+	{
 		this.$4 = $4;
 	}
 snippet get
-	${1:public} ${2:String} get${3:}(){
+	${1:public} ${2:String} get${3:}()
+	{
 		return this.${0:};
 	}
 ##
@@ -267,12 +279,14 @@ snippet br
 ##
 ## Test Methods
 snippet t
-	public void test${1:Name}() throws Exception {
+	public void test${1:Name}() throws Exception
+	{
 		${0}
 	}
 snippet test
 	@Test
-	public void test${1:Name}() throws Exception {
+	public void test${1:Name}() throws Exception
+	{
 		${0}
 	}
 ##

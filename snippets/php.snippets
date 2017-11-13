@@ -277,19 +277,23 @@ snippet def "define('VARIABLE_NAME', 'definition')"
 snippet def?
 	${1}defined('${2}')
 snippet wh "while (condition) { ... }"
-	while (${1:/* condition */}) {
+	while (${1:/* condition */})
+	{
 		${0:${VISUAL}}
 	}
 snippet do "do { ... } while (condition)"
-	do {
+	do
+	{
 		${0:${VISUAL}}
 	} while (${1});
 snippet if "if (condition) { ... }"
-	if (${1}) {
+	if (${1})
+	{
 		${0:${VISUAL}}
 	}
 snippet ifn "if (!condition) { ... }"
-	if (!${1}) {
+	if (!${1})
+	{
 		${0:${VISUAL}}
 	}
 snippet ifil "<?php if (condition): ?> ... <?php endif; ?>"
@@ -297,9 +301,11 @@ snippet ifil "<?php if (condition): ?> ... <?php endif; ?>"
 		${0:${VISUAL}}
 	<?php endif; ?>
 snippet ife "if (cond) { ... } else { ... }"
-	if (${1}) {
+	if (${1})
+	{
 		${0:${VISUAL}}
-	} else {
+	} else
+	{
 		${2}
 	}
 snippet ifeil "<?php if (condition): ?> ... <?php else: ?> ... <?php endif; ?>"
@@ -309,11 +315,13 @@ snippet ifeil "<?php if (condition): ?> ... <?php else: ?> ... <?php endif; ?>"
 		${2}
 	<?php endif; ?>
 snippet el "else { ... }"
-	else {
+	else
+	{
 		${0:${VISUAL}}
 	}
 snippet eif "elseif(condition) { ... }"
-	elseif (${1}) {
+	elseif (${1})
+	{
 		${0:${VISUAL}}
 	}
 snippet switch "switch($var) { case 'xyz': ... default: .... }"
@@ -331,11 +339,13 @@ snippet case "case 'value': ... break"
 		${0:${VISUAL}}
 		break;
 snippet for "for ($i = 0; $i < $count; $i++) { ... }"
-	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++}) {
+	for ($${2:i} = 0; $$2 < ${1:count}; $$2${3:++})
+	{
 		${0:${VISUAL}}
 	}
 snippet foreach "foreach ($var as $value) { .. }"
-	foreach ($${1:variable} as $${2:value}) {
+	foreach ($${1:variable} as $${2:value})
+	{
 		${0:${VISUAL}}
 	}
 snippet foreachil "<?php foreach ($var as $value): ?>  ... <?php endforeach; ?>"
@@ -343,7 +353,8 @@ snippet foreachil "<?php foreach ($var as $value): ?>  ... <?php endforeach; ?>"
 		${0:${VISUAL}}
 	<?php endforeach; ?>
 snippet foreachk "foreach ($var as $key => $value) { .. }"
-	foreach ($${1:variable} as $${2:key} => $${3:value}) {
+	foreach ($${1:variable} as $${2:key} => $${3:value})
+	{
 		${0:${VISUAL}}
 	}
 snippet foreachkil "<?php foreach ($var as $key => $value): ?>  ... <?php endforeach; ?>"
@@ -353,13 +364,16 @@ snippet foreachkil "<?php foreach ($var as $key => $value): ?>  ... <?php endfor
 snippet array "$... = ['' => ]"
 	$${1:arrayName} = ['${2}' => ${3}];
 snippet try "try { ... } catch (Exception $e) { ... }"
-	try {
+	try
+	{
 		${0:${VISUAL}}
-	} catch (${1:Exception} $e) {
+	} catch (${1:Exception} $e)
+	{
 	}
 # lambda with closure
 snippet lambda
-	${1:static }function (${2:args}) use (${3:&$x, $y /*put vars in scope (closure) */}) {
+	${1:static }function (${2:args}) use (${3:&$x, $y /*put vars in scope (closure) */})
+	{
 		${0}
 	};
 # pre_dump();
@@ -443,13 +457,15 @@ snippet am
 		return $$2;
 	}, $$1);
 snippet aw
-	array_walk($${1:foo}, function(&$${2:v}, $${3:k}) {
+	array_walk($${1:foo}, function(&$${2:v}, $${3:k})
+	{
 		$$2 = ${0};
 	});
 # static var assign once
 snippet static_var
 	static $${1} = null;
-	if (is_null($$1)){
+	if (is_null($$1))
+	{
 		$$1 = ${2};
 	}
 snippet CSVWriter
@@ -481,7 +497,8 @@ snippet CSVWriter
 			$this->f = null;
 		}
 	
-		public function __destruct(){
+		public function __destruct()
+		{
 			$this->close();
 		}
 	
@@ -527,9 +544,11 @@ snippet CSVIterator
 		protected function readRow(){
 			$this->curr = call_user_func_array('fgetcsv', $this->fgetcsv_args );
 			$this->rowCounter++;
-			if ($this->rowCounter == 1){
+			if ($this->rowCounter == 1)
+			{
 				$this->processHeader();
-			} elseif ($this->curr) {
+			} elseif ($this->curr)
+			{
 				$this->processRow();
 			}
 		}

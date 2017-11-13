@@ -11,24 +11,28 @@ snippet loa @load
 	@load "${1}"${0}
 
 snippet beg BEGIN { ... }
-	BEGIN {
+	BEGIN
+	{
 		${0}
 	}
 
 # BEGINFILE is a gawk extension
 snippet begf BEGINFILE { ... }
-	BEGINFILE {
+	BEGINFILE
+	{
 		${0}
 	}
 
 snippet end END { ... }
-	END {
+	END
+	{
 		${0}
 	}
 
 # ENDFILE is a gawk extension
 snippet endf ENDFILE { ... }
-	ENDFILE {
+	ENDFILE
+	{
 		${0}
 	}
 
@@ -42,44 +46,53 @@ snippet ign IGNORECASE
 	IGNORECASE = ${1:1}
 
 snippet if if {...}
-	if (${1}) {
+	if (${1})
+	{
 		${0:${VISUAL}}
 	}
 
 snippet ife if ... else ...
-	if (${1}) {
+	if (${1})
+	{
 		${2:${VISUAL}}
-	} else {
+	} else
+	{
 		${0}
 	}
 
 snippet eif else if ...
-	else if (${1}) {
+	else if (${1})
+	{
 		${0}
 	}
 
 snippet el else {...}
-	else {
+	else
+	{
 		${0}
 	}
 
 snippet wh while
-	while (${1}) {
+	while (${1})
+	{
 		${2}
 	}
 
 snippet do do ... while
-	do {
+	do
+	{
 		${0}
 	} while (${1})
 
 snippet for for
-	for (${2:i} = 0; i < ${1:n}; ${3:++i}) {
+	for (${2:i} = 0; i < ${1:n}; ${3:++i})
+	{
 		${0}
 	}
 
 snippet fore for each
-	for (${1:i} in ${2:array}) {
+	for (${1:i} in ${2:array})
+	{
 		${0}
 	}
 

@@ -74,14 +74,19 @@ snippet sapmvbox
 			});
 
 snippet sapcomponent
-	sap.ui.controller("$1", {
-	   onInit: function(){
+	sap.ui.controller("$1",
+	   {
+	   onInit: function()
+	   {
 	   },
-	   onAfterRendering: function() {
+	   onAfterRendering: function()
+	   {
 	   },
-	   onAfterRendering: function() {
+	   onAfterRendering: function()
+	   {
 	   },
-	   onExit: function() {
+	   onExit: function()
+	{
 	   },
 	});
 
@@ -168,17 +173,21 @@ snippet sapicon
 snippet extendVerticalL
 	sap.ui.layout.VerticalLayout.extend("$1", {
 	    metadata: {
-		properties: {
+		properties:
+		{
 		  	$2
 		},
-		aggregations: {
+		aggregations:
+		{
 			$3
 		},
-		events: {
+		events:
+		{
 			$4
 		}
 	    },
-	   init: function(){
+	   init: function()
+	    {
 		$5
 	    },
 
@@ -187,17 +196,21 @@ snippet extendVerticalL
 snippet extendHorizontalL
 	sap.ui.layout.HorizontalLayout.extend("$1", {
 	    metadata: {
-		properties: {
+		properties:
+		{
 		  	$2
 		},
-		aggregations: {
+		aggregations:
+		{
 			$3
 		},
-		events: {
+		events:
+		{
 			$4
 		}
 	    },
-	   init: function(){
+	   init: function()
+	    {
 		$5
 	    },
 

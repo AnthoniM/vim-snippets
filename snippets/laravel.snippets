@@ -7,29 +7,38 @@ snippet l_rsc
 	* \date        `!v strftime('%d-%m-%y')`
 	*/
 
-	class ${1:`!v expand('%:t:r')`} extends ${2:BaseController} {
-		function __construct() {
+	class ${1:`!v expand('%:t:r')`} extends ${2:BaseController}
+		{
+		function __construct()
+		{
 		}
 		
-		public function index() {
+		public function index()
+		{
 		}
 		
-		public function create() {
+		public function create()
+		{
 		}
 		
-		public function store() {
+		public function store()
+		{
 		}
 		
-		public function show($id) {
+		public function show($id)
+		{
 		}
 		
-		public function edit($id) {
+		public function edit($id)
+		{
 		}
 		
-		public function update($id) {
+		public function update($id)
+		{
 		}
 		
-		public function destroy($id) {
+		public function destroy($id)
+	{
 		}
 	}
 #service service provider
@@ -80,7 +89,8 @@ snippet l_rsp
 		protected $defer = ${5:true};
 
 		public function register() {
-				$this->app->bind('$2\\$1Interface', function($app) {
+				$this->app->bind('$2\\$1Interface', function($app)
+				{
 						return new $1Repository(new $1());
 				});
 		}
@@ -88,7 +98,8 @@ snippet l_rsp
 		/*!
 		* \brief   If $defer == true need this fn
 		*/ 
-		public function provides() {
+		public function provides()
+		{
 				return ['$2\\$1Interface'];
 		}
 	}
@@ -137,7 +148,8 @@ snippet l_ar
 		* \brief   Take the model
 		*/
 
-		public function __construct(Model $model) {
+		public function __construct(Model $model)
+		{
 				$this->model = $model;
 		}
 
@@ -146,7 +158,8 @@ snippet l_ar
 		*
 		* \return  Illuminate\Database\Eloquent\Collection
 		*/
-		public function all($columns = array('*')) {
+		public function all($columns = array('*'))
+		{
 				return $this->model->all()->toArray();
 		}
 
@@ -155,7 +168,8 @@ snippet l_ar
 		*
 		* \return  Illuminate\Database\Eloquent\Model
 		*/
-		public function create(array $attributes) {
+		public function create(array $attributes)
+		{
 				return $this->model->create($attributes);
 		}
 
@@ -164,7 +178,8 @@ snippet l_ar
 		*
 		* \return  int
 		*/
-		public function destroy($ids) {
+		public function destroy($ids)
+		{
 				return $this->model->destroy($ids);
 		}
 
@@ -173,7 +188,8 @@ snippet l_ar
 		*
 		* \return  mixed
 		*/
-		public function find($id, $columns = array('*')) {
+		public function find($id, $columns = array('*'))
+		{
 			return $this->model->find($id, $columns);
 		}
 	}
@@ -191,7 +207,8 @@ snippet l_r
 
 	namespace ${1:Repositories\\${2}};
 
-	class ${3:`!v expand('%:t:r')`} extends \\${6} implements ${4:$3RepositoryInterface} {
+	class ${3:`!v expand('%:t:r')`} extends \\${6} implements ${4:$3RepositoryInterface}
+	{
 		${7}
 	}
 #service
@@ -214,7 +231,8 @@ snippet l_s
 		/*!
 		* \fn      __construct
 		*/
-		public function __construct($4 $repo) {
+		public function __construct($4 $repo)
+		{
 			$this->$5 = $repo;
 		}
 	}

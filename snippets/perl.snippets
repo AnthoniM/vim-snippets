@@ -7,35 +7,43 @@ snippet .
 	 =>
 # Function
 snippet sub
-	sub ${1:function_name} {
+	sub ${1:function_name}
+	{
 		${0}
 	}
 # Conditional
 snippet if
-	if (${1}) {
+	if (${1})
+	{
 		${0}
 	}
 # Conditional if..else
 snippet ife
-	if (${1}) {
+	if (${1})
+	{
 		${2}
 	}
-	else {
+	else
+	{
 		${0}
 	}
 # Conditional if..elsif..else
 snippet ifee
-	if (${1}) {
+	if (${1})
+	{
 		${2}
 	}
-	elsif (${3}) {
+	elsif (${3})
+	{
 		${4:# elsif...}
 	}
-	else {
+	else
+	{
 		${0}
 	}
 snippet eif
-	elsif (${1}) {
+	elsif (${1})
+	{
 		${0}
 	}
 # Conditional One-line
@@ -43,7 +51,8 @@ snippet xif
 	${1:expression} if ${2:condition};
 # Unless conditional
 snippet unless
-	unless (${1}) {
+	unless (${1})
+	{
 		${0}
 	}
 # Unless conditional One-line
@@ -52,15 +61,18 @@ snippet xunless
 # Try/Except
 snippet eval
 	local $@;
-	eval {
+	eval
+	{
 		${1:# do something risky...}
 	};
-	if (my $e = $@) {
+	if (my $e = $@)
+	{
 		${0:# handle failure...}
 	}
 # While Loop
 snippet wh
-	while (${1}) {
+	while (${1})
+	{
 		${0}
 	}
 # While Loop One-line
@@ -68,7 +80,8 @@ snippet xwh
 	${1:expression} while ${2:condition};
 # C-style For Loop
 snippet cfor
-	for (my $${2:var} = 0; $$2 < ${1:count}; $$2${3:++}) {
+	for (my $${2:var} = 0; $$2 < ${1:count}; $$2${3:++})
+	{
 		${0}
 	}
 # For loop one-line
@@ -76,7 +89,8 @@ snippet xfor
 	${1:expression} for @${2:array};
 # Foreach Loop
 snippet for
-	foreach my $${1:x} (@${2:array}) {
+	foreach my $${1:x} (@${2:array})
+	{
 		${0}
 	}
 # Foreach Loop One-line
@@ -134,7 +148,8 @@ snippet switch
 
 # Anonymous subroutine
 snippet asub
-	sub {
+	sub
+	{
 		${0}
 	}
 
@@ -142,7 +157,8 @@ snippet asub
 
 # Begin block
 snippet begin
-	BEGIN {
+	BEGIN
+	{
 		${0}
 	}
 
@@ -181,7 +197,8 @@ snippet given
 
 # switch-like case
 snippet when
-	when (${1:case}) {
+	when (${1:case})
+	{
 		${0}
 	}
 
@@ -244,7 +261,8 @@ snippet subpod
 
 	=cut
 
-	sub ${1:subroutine_name} {
+	sub ${1:subroutine_name}
+	{
 		${0}
 	}
 # Subroutine signature
@@ -288,7 +306,8 @@ snippet has
 	has ${1:attribute} => (
 		is	    => '${2:ro|rw}',
 		isa 	=> '${3:Str|Int|HashRef|ArrayRef|etc}',
-		default => sub {
+		default => sub
+		{
 			${4:defaultvalue}
 		},
 		${0:# other attributes}
@@ -349,7 +368,8 @@ snippet debug_trace
 	use Carp; # 'verbose';
 	# cloak "die"
 	# warn "warning"
-	$SIG{'__DIE__'} = sub {
+	$SIG{'__DIE__'} = sub
+	{
 		require Carp; Carp::confess
 	};
 
@@ -358,6 +378,7 @@ snippet dump
 	warn dump ${1:variable}
 
 snippet subtest
-	subtest '${1: test_name}' => sub {
+	subtest '${1: test_name}' => sub
+	{
 		${2}
 	};

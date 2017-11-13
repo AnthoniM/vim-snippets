@@ -10,45 +10,54 @@ snippet ajax
 		type: '${2:POST}',
 		dataType: '${3:xml/html/script/json}',
 		data: $.param( $('${4:Element or Expression}') ),
-		complete: function (jqXHR, textStatus) {
+		complete: function (jqXHR, textStatus)
+		{
 			${5:// callback}
 		},
-		success: function (data, textStatus, jqXHR) {
+		success: function (data, textStatus, jqXHR)
+		{
 			${6:// success callback}
 		},
-		error: function (jqXHR, textStatus, errorThrown) {
+		error: function (jqXHR, textStatus, errorThrown)
+		{
 			${0:// error callback}
 		}
 	});
 snippet ajaxcomplete
-	${1:obj}.ajaxComplete(function (${1:e}, xhr, settings) {
+	${1:obj}.ajaxComplete(function (${1:e}, xhr, settings)
+	{
 		${0:// callback}
 	});
 snippet ajaxerror
-	${1:obj}.ajaxError(function (${1:e}, xhr, settings, thrownError) {
+	${1:obj}.ajaxError(function (${1:e}, xhr, settings, thrownError)
+	{
 		${2:// error callback}
 	});
 	${0}
 snippet ajaxget
 	$.get('${1:mydomain.com/url}',
 		${2:{ param1: value1 },}
-		function (data, textStatus, jqXHR) {
+		function (data, textStatus, jqXHR)
+		{
 			${0:// success callback}
 		}
 	);
 snippet ajaxpost
 	$.post('${1:mydomain.com/url}',
 		${2:{ param1: value1 },}
-		function (data, textStatus, jqXHR) {
+		function (data, textStatus, jqXHR)
+		{
 			${0:// success callback}
 		}
 	);
 snippet ajaxprefilter
-	$.ajaxPrefilter(function (${1:options}, ${2:originalOptions}, jqXHR) {
+	$.ajaxPrefilter(function (${1:options}, ${2:originalOptions}, jqXHR)
+	{
 		${0: // Modify options, control originalOptions, store jqXHR, etc}
 	});
 snippet ajaxsend
-	${1:obj}.ajaxSend(function (${1:request, settings}) {
+	${1:obj}.ajaxSend(function (${1:request, settings})
+	{
 		${2:// error callback}
 	});
 	${0}
@@ -58,28 +67,34 @@ snippet ajaxsetup
 		type: "${2:POST}",
 		dataType: "${3:xml/html/script/json}",
 		data: $.param( $("${4:Element or Expression}") ),
-		complete: function (jqXHR, textStatus) {
+		complete: function (jqXHR, textStatus)
+		{
 			${5:// callback}
 		},
-		success: function (data, textStatus, jqXHR) {
+		success: function (data, textStatus, jqXHR)
+		{
 			${6:// success callback}
 		},
-		error: function (jqXHR, textStatus, errorThrown) {
+		error: function (jqXHR, textStatus, errorThrown)
+		{
 			${0:// error callback}
 		}
 	});
 snippet ajaxstart
-	$.ajaxStart(function () {
+	$.ajaxStart(function ()
+	{
 		${1:// handler for when an AJAX call is started and no other AJAX calls are in progress};
 	});
 	${0}
 snippet ajaxstop
-	$.ajaxStop(function () {
+	$.ajaxStop(function ()
+	{
 		${1:// handler for when all AJAX calls have been completed};
 	});
 	${0}
 snippet ajaxsuccess
-	$.ajaxSuccess(function (${1:e}, xhr, settings) {
+	$.ajaxSuccess(function (${1:e}, xhr, settings)
+	{
 		${2:// handler for when any AJAX call is successfully completed};
 	});
 	${0}
@@ -98,11 +113,13 @@ snippet attrm
 snippet before
 	${1:obj}.before('${2:Some text <b>and bold!</b>}')
 snippet bind
-	${1:obj}.bind('${2:event name}', function (${3:e}) {
+	${1:obj}.bind('${2:event name}', function (${3:e})
+	{
 		${0:// event handler}
 	});
 snippet blur
-	${1:obj}.blur(function (${2:e}) {
+	${1:obj}.blur(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet C
@@ -128,7 +145,8 @@ snippet Clocked
 snippet Crem
 	${1:callbacks}.remove(${2:callbacks})
 snippet change
-	${1:obj}.change(function (${2:e}) {
+	${1:obj}.change(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet children
@@ -136,7 +154,8 @@ snippet children
 snippet clearq
 	${1:obj}.clearQueue(${2:'queue name'})
 snippet click
-	${1:obj}.click(function (${2:e}) {
+	${1:obj}.click(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet clone
@@ -147,10 +166,12 @@ snippet css
 	${1:obj}.css('${2:attribute}', '${3:value}')
 snippet csshooks
 	$.cssHooks['${1:CSS prop}'] = {
-		get: function (elem, computed, extra) {
+		get: function (elem, computed, extra)
+		{
 			${2: // handle getting the CSS property}
 		},
-		set: function (elem, value) {
+		set: function (elem, value)
+		{
 			${0: // handle setting the CSS value}
 		}
 	};
@@ -197,13 +218,15 @@ snippet data
 snippet dataa
 	$.data('${1:selector expression}', '${2:key}'${3:, 'value'})
 snippet dblclick
-	${1:obj}.dblclick(function (${2:e}) {
+	${1:obj}.dblclick(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet delay
 	${1:obj}.delay('${2:slow/400/fast}'${3:, 'queue name'})
 snippet dele
-	${1:obj}.delegate('${2:selector expression}', '${3:event name}', function (${4:e}) {
+	${1:obj}.delegate('${2:selector expression}', '${3:event name}', function (${4:e})
+	{
 		${0:// event handler}
 	});
 snippet deq
@@ -215,7 +238,8 @@ snippet detach
 snippet die
 	${1:obj}.die(${2:event}, ${3:handler})
 snippet each
-	${1:obj}.each(function (index) {
+	${1:obj}.each(function (index)
+	{
 		${0:this.innerHTML = this + " is the element, " + index + " is the position";}
 	});
 snippet el
@@ -229,7 +253,8 @@ snippet end
 snippet eq
 	${1:obj}.eq(${2:element index})
 snippet error
-	${1:obj}.error(function (${2:e}) {
+	${1:obj}.error(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet eventsmap
@@ -241,39 +266,46 @@ snippet extend
 snippet fadein
 	${1:obj}.fadeIn('${2:slow/400/fast}')
 snippet fadeinc
-	${1:obj}.fadeIn('slow/400/fast', function () {
+	${1:obj}.fadeIn('slow/400/fast', function ()
+	{
 		${0:// callback};
 	});
 snippet fadeout
 	${1:obj}.fadeOut('${2:slow/400/fast}')
 snippet fadeoutc
-	${1:obj}.fadeOut('slow/400/fast', function () {
+	${1:obj}.fadeOut('slow/400/fast', function ()
+	{
 		${0:// callback};
 	});
 snippet fadeto
 	${1:obj}.fadeTo('${2:slow/400/fast}', ${3:0.5})
 snippet fadetoc
-	${1:obj}.fadeTo('slow/400/fast', ${2:0.5}, function () {
+	${1:obj}.fadeTo('slow/400/fast', ${2:0.5}, function ()
+	{
 		${0:// callback};
 	});
 snippet filter
 	${1:obj}.filter('${2:selector expression}')
 snippet filtert
-	${1:obj}.filter(function (${2:index}) {
+	${1:obj}.filter(function (${2:index})
+	{
 		${3}
 	})
 snippet find
 	${1:obj}.find('${2:selector expression}')
 snippet focus
-	${1:obj}.focus(function (${2:e}) {
+	${1:obj}.focus(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet focusin
-	${1:obj}.focusIn(function (${2:e}) {
+	${1:obj}.focusIn(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet focusout
-	${1:obj}.focusOut(function (${2:e}) {
+	${1:obj}.focusOut(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet get
@@ -281,16 +313,19 @@ snippet get
 snippet getjson
 	$.getJSON('${1:mydomain.com/url}',
 		${2:{ param1: value1 },}
-		function (data, textStatus, jqXHR) {
+		function (data, textStatus, jqXHR)
+		{
 			${0:// success callback}
 		}
 	);
 snippet getscript
-	$.getScript('${1:mydomain.com/url}', function (script, textStatus, jqXHR) {
+	$.getScript('${1:mydomain.com/url}', function (script, textStatus, jqXHR)
+	{
 		${0:// callback}
 	});
 snippet grep
-	$.grep(${1:array}, function (item, index) {
+	$.grep(${1:array}, function (item, index)
+	{
 		${2}
 	}${0:, true});
 snippet hasc
@@ -302,13 +337,16 @@ snippet height
 snippet hide
 	${1:obj}.hide('${2:slow/400/fast}')
 snippet hidec
-	${1:obj}.hide('${2:slow/400/fast}', function () {
+	${1:obj}.hide('${2:slow/400/fast}', function ()
+	{
 		${0:// callback}
 	});
 snippet hover
-	${1:obj}.hover(function (${2:e}) {
+	${1:obj}.hover(function (${2:e})
+	{
 		${3:// event handler}
-	}, function ($2) {
+	}, function ($2)
+	{
 		${4:// event handler}
 	});
 snippet html
@@ -338,72 +376,87 @@ snippet isxml
 snippet jj
 	$('${1:selector}')
 snippet kdown
-	${1:obj}.keydown(function (${2:e}) {
+	${1:obj}.keydown(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet kpress
-	${1:obj}.keypress(function (${2:e}) {
+	${1:obj}.keypress(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet kup
-	${1:obj}.keyup(function (${2:e}) {
+	${1:obj}.keyup(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet last
 	${1:obj}.last('${1:selector expression}')
 snippet live
-	${1:obj}.live('${2:events}', function (${3:e}) {
+	${1:obj}.live('${2:events}', function (${3:e})
+	{
 		${0:// event handler}
 	});
 snippet load
-	${1:obj}.load(function (${2:e}) {
+	${1:obj}.load(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet loadf
 	${1:obj}.load('${2:mydomain.com/url}',
 		${2:{ param1: value1 },}
-		function (responseText, textStatus, xhr) {
+		function (responseText, textStatus, xhr)
+		{
 			${0:// success callback}
 		}
 	});
 snippet makearray
 	$.makeArray(${0:obj});
 snippet map
-	${1:obj}.map(function (${2:index}, ${3:element}) {
+	${1:obj}.map(function (${2:index}, ${3:element})
+	{
 		${0:// callback}
 	});
 snippet mapp
-	$.map(${1:arrayOrObject}, function (${2:value}, ${3:indexOrKey}) {
+	$.map(${1:arrayOrObject}, function (${2:value}, ${3:indexOrKey})
+	{
 		${0:// callback}
 	});
 snippet merge
 	$.merge(${1:target}, ${0:original});
 snippet mdown
-	${1:obj}.mousedown(function (${2:e}) {
+	${1:obj}.mousedown(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet menter
-	${1:obj}.mouseenter(function (${2:e}) {
+	${1:obj}.mouseenter(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet mleave
-	${1:obj}.mouseleave(function (${2:e}) {
+	${1:obj}.mouseleave(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet mmove
-	${1:obj}.mousemove(function (${2:e}) {
+	${1:obj}.mousemove(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet mout
-	${1:obj}.mouseout(function (${2:e}) {
+	${1:obj}.mouseout(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet mover
-	${1:obj}.mouseover(function (${2:e}) {
+	${1:obj}.mouseover(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet mup
-	${1:obj}.mouseup(function (${2:e}) {
+	${1:obj}.mouseup(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet next
@@ -421,11 +474,13 @@ snippet offset
 snippet offsetp
 	${1:obj}.offsetParent()
 snippet on
-	${1:obj}.on('${2:events}', '${3:selector expression}', function (${4:e}) {
+	${1:obj}.on('${2:events}', '${3:selector expression}', function (${4:e})
+	{
 		${0:// event handler}
 	});
 snippet one
-	${1:obj}.one('${2:event name}', function (${3:e}) {
+	${1:obj}.one('${2:event name}', function (${3:e})
+	{
 		${0:// event handler}
 	});
 snippet outerh
@@ -469,7 +524,8 @@ snippet queue
 snippet queuee
 	$.queue(${1:element}${2:, name}${3:, newQueue})
 snippet ready
-	$(function () {
+	$(function ()
+	{
 		${0}
 	});
 snippet rem
@@ -489,15 +545,18 @@ snippet repa
 snippet repw
 	${1:obj}.replaceWith(${2:content})
 snippet reset
-	${1:obj}.reset(function (${2:e}) {
+	${1:obj}.reset(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet resize
-	${1:obj}.resize(function (${2:e}) {
+	${1:obj}.resize(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet scroll
-	${1:obj}.scroll(function (${2:e}) {
+	${1:obj}.scroll(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet scrolll
@@ -507,11 +566,13 @@ snippet scrollt
 snippet sdown
 	${1:obj}.slideDown('${2:slow/400/fast}')
 snippet sdownc
-	${1:obj}.slideDown('${2:slow/400/fast}', function () {
+	${1:obj}.slideDown('${2:slow/400/fast}', function ()
+	{
 		${0:// callback};
 	});
 snippet select
-	${1:obj}.select(function (${2:e}) {
+	${1:obj}.select(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet serialize
@@ -521,7 +582,8 @@ snippet serializea
 snippet show
 	${1:obj}.show('${2:slow/400/fast}')
 snippet showc
-	${1:obj}.show('${2:slow/400/fast}', function () {
+	${1:obj}.show('${2:slow/400/fast}', function ()
+	{
 		${0:// callback}
 	});
 snippet sib
@@ -535,13 +597,15 @@ snippet stoggle
 snippet stop
 	${1:obj}.stop('${2:queue}', ${3:false}, ${4:false})
 snippet submit
-	${1:obj}.submit(function (${2:e}) {
+	${1:obj}.submit(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet sup
 	${1:obj}.slideUp('${2:slow/400/fast}')
 snippet supc
-	${1:obj}.slideUp('${2:slow/400/fast}', function () {
+	${1:obj}.slideUp('${2:slow/400/fast}', function ()
+	{
 		${0:// callback};
 	});
 snippet text
@@ -551,9 +615,11 @@ snippet this
 snippet toarr
 	${0:obj}.toArray()
 snippet tog
-	${1:obj}.toggle(function (${2:e}) {
+	${1:obj}.toggle(function (${2:e})
+	{
 		${3:// event handler}
-	}, function ($2) {
+	}, function ($2)
+	{
 		${4:// event handler}
 	});
 	${0}
@@ -576,7 +642,8 @@ snippet undele
 snippet uniq
 	$.unique(${1:array})
 snippet unload
-	${1:obj}.unload(function (${2:e}) {
+	${1:obj}.unload(function (${2:e})
+	{
 		${0:// event handler}
 	});
 snippet unwrap

@@ -3,7 +3,8 @@
 
 # PowerShell Class
 snippet class
-	class {
+	class
+	{
 		[string] ${0:FirstName}
 	}
 
@@ -16,13 +17,16 @@ snippet function
 			[string] $Param1
 		)
 
-		begin {
+		begin
+		{
 		}
 
-		process {
+		process
+		{
 		}
 
-		end {
+		end
+	{
 		}
 	}
 
@@ -43,13 +47,15 @@ snippet enum
 
 # PowerShell if..then
 snippet if
-	if (${0:condition}) {
+	if (${0:condition})
+	{
 		${1:statement}
 	}
 
 # PowerShell While Loop
 snippet while
-	while (${0:condition}) {
+	while (${0:condition})
+	{
 		${1:statement}
 	}
 

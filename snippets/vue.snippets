@@ -27,7 +27,8 @@ snippet vbase
 	</template>
 
 	<script>
-		export default{
+		export default
+		{
 
 		}
 	</script>
@@ -38,7 +39,8 @@ snippet vimport:c
 	import New from './components/New.vue';
 
 	export default{
-		components: {
+		components:
+		{
 			appNew: New 
 		}
 	}
@@ -46,7 +48,8 @@ snippet vimport:c
 snippet vactionsis now
 
 	actions: {
-		updateValue({commit}, payload) {
+		updateValue({commit}, payload)
+		{
 			commit(updateValue, payload);
 		}
 	}
@@ -68,30 +71,36 @@ snippet vanim:js:el
 	 
 snippet vanim:js:method
 	methods: {
-	  beforeEnter(el) {
+	  beforeEnter(el)
+	  {
 		console.log('beforeEnter');
 	  }, 
 	  enter(el, done) {
 		 console.log('enter');
 		 done();
 	  },
-	  afterEnter(el) {
+	  afterEnter(el)
+	  {
 		console.log('afterEnter');
 	  }, 
-	  enterCancelled(el, done) {
+	  enterCancelled(el, done)
+	  {
 		 console.log('enterCancelled');
 	  },
-	  beforeLeave(el) {
+	  beforeLeave(el)
+	  {
 		console.log('beforeLeave');
 	  }, 
 	  leave(el, done) {
 		 console.log('leave');
 		 done();
 	  },
-	  afterLeave(el) {
+	  afterLeave(el)
+	  {
 		console.log('afterLeave');
 	  }, 
-	  leaveCancelled(el, done) {
+	  leaveCancelled(el, done)
+	  {
 		 console.log('leaveCancelled');
 	  }
 	}
@@ -101,14 +110,16 @@ snippet vcl
 
 snippet vdata
 	data: function () {
-	  return {
+	  return
+	  {
 		key: value
 	  };
 	}
 
 snippet vfilter
 	filters: {
-	  fnName: function (v) {
+	  fnName: function (v)
+	  {
 		return;
 	  }
 	}
@@ -120,7 +131,8 @@ snippet vfor
 
 snippet vgetters
 	getters: {
-		value: state => {
+		value: state =>
+		{
 			return state.value;
 		}
 	}
@@ -138,17 +150,20 @@ snippet vkeep
 snippet vmixin
 	// define a mixin object
 	var myMixin = {
-	  created: function () {
+	  created: function ()
+	  {
 		this.hello()
 	  },
 	  methods: {
-		hello: function () {
+		hello: function ()
+		{
 		  console.log('hello from mixin!')
 		}
 	  }
 	}
 	// define a component that uses this mixin
-	var Component = Vue.extend({
+	var Component = Vue.extend(
+	{
 	  mixins: [myMixin]
 	})
 	var component = new Component() // -> "hello from mixin!"
@@ -156,17 +171,20 @@ snippet vmixin
 snippet vmutations
 	// define a mixin object
 	var myMixin = {
-	  created: function () {
+	  created: function ()
+	  {
 		this.hello()
 	  },
 	  methods: {
-		hello: function () {
+		hello: function ()
+		{
 		  console.log('hello from mixin!')
 		}
 	  }
 	}
 	// define a component that uses this mixin
-	var Component = Vue.extend({
+	var Component = Vue.extend(
+	{
 	  mixins: [myMixin]
 	})
 	var component = new Component() // -> "hello from mixin!"
@@ -178,6 +196,7 @@ snippet vprops:d
 	},
 
 snippet vprops 
-	propName: {
+	propName:
+	{
 		type: Number
 	},

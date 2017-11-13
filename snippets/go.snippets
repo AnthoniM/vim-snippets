@@ -49,7 +49,8 @@ snippet df
 # defer recover
 snippet dfr
 	defer func() {
-		if err := recover(); err != nil {
+		if err := recover(); err != nil
+		{
 			${0:${VISUAL}}
 		}
 	}()
@@ -66,28 +67,34 @@ snippet in
 	interface{}
 # full interface snippet
 snippet inf
-	interface ${1:name} {
+	interface ${1:name}
+	{
 		${2:/* methods */}
 	}
 # if condition
 snippet if
-	if ${1:/* condition */} {
+	if ${1:/* condition */}
+	{
 		${2:${VISUAL}}
 	}
 snippet ife
-	if ${1:/* condition */} {
+	if ${1:/* condition */}
+	{
 		${2:${VISUAL}}
-	} else {
+	} else
+	{
 		${0}
 	}
 # else snippet
 snippet el
-	else {
+	else
+	{
 		${0:${VISUAL}}
 	}
 # error snippet
 snippet ir
-	if err != nil {
+	if err != nil
+	{
 		return err
 	}
 	${0}
@@ -108,28 +115,33 @@ snippet f6
 	float64
 # for int loop
 snippet for
-	for ${1}{
+	for ${1}
+	{
 		${0:${VISUAL}}
 	}
 # for int loop
 snippet fori
-	for ${2:i} := 0; $2 < ${1:count}; $2${3:++} {
+	for ${2:i} := 0; $2 < ${1:count}; $2${3:++}
+	{
 		${0:${VISUAL}}
 	}
 # for range loop
 snippet forr
-	for ${1:e} := range ${2:collection} {
+	for ${1:e} := range ${2:collection}
+	{
 		${0:${VISUAL}}
 	}
 # function simple
 snippet fun
-	func ${1:funcName}(${2}) ${3:error} {
+	func ${1:funcName}(${2}) ${3:error}
+	{
 		${4}
 	}
 	${0}
 # function on receiver
 snippet fum
-	func (${1:receiver} ${2:type}) ${3:funcName}(${4}) ${5:error} {
+	func (${1:receiver} ${2:type}) ${3:funcName}(${4}) ${5:error}
+	{
 		${6}
 	}
 	${0}
@@ -147,7 +159,8 @@ snippet mp
 	map[${1:string}]${0:int}
 # main()
 snippet main
-	func main() {
+	func main()
+	{
 		${1}
 	}
 	${0}
@@ -188,7 +201,8 @@ snippet sr
 	string
 # struct
 snippet st
-	struct ${1:name} {
+	struct ${1:name}
+	{
 		${2:/* data */}
 	}
 	${0}
@@ -212,36 +226,43 @@ snippet g
 	go ${1:funcName}(${0})
 # goroutine anonymous function
 snippet ga
-	go func(${1} ${2:type}) {
+	go func(${1} ${2:type})
+	{
 		${3:/* code */}
 	}(${0})
 snippet test test function
-	func Test${1:name}(t *testing.T) {
+	func Test${1:name}(t *testing.T)
+	{
 		${0:${VISUAL}}
 	}
 snippet bench benchmark function
 	func Benchmark${1:name}(b *testing.B) {
-		for i := 0; i < b.N; i++ {
+		for i := 0; i < b.N; i++
+		{
 			${2}
 		}
 	}
 	${0}
 # composite literals
 snippet cl
-	type ${1:name} struct {
+	type ${1:name} struct
+	{
 		${2:attrName} ${3:attrType}
 	}
 # if key in a map
 snippet om
-	if ${1:value}, ok := ${2:map}[${3:key}]; ok == true {
+	if ${1:value}, ok := ${2:map}[${3:key}]; ok == true
+	{
 		${4:/* code */}
 	}
 
 # Grouped globals with anonymous struct
 snippet gg
-	var ${1:var} = struct{
+	var ${1:var} = struct
+	{
 		${2:name} ${3:type}
-	}{
+	}
+	{
 		$2: ${4:value},
 	}
 
@@ -249,6 +270,7 @@ snippet gg
 snippet ja
 	type ${1:parentType}Alias $1
 
-	func (p *$1) MarshalJSON() ([]byte, error) {
+	func (p *$1) MarshalJSON() ([]byte, error)
+	{
 		return json.Marshal(&struct{ *$1Alias }{(*$1Alias)(p)})
 	}

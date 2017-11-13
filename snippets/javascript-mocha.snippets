@@ -1,29 +1,36 @@
 snippet des "describe('thing', () => { ... })" b
-	describe('${1:}', () => {
+	describe('${1:}', () =>
+	{
 		${0:${VISUAL}}
 	});
 snippet it "it('should do', () => { ... })" b
-	it('${1:}', () => {
+	it('${1:}', () =>
+	{
 		${0:${VISUAL}}
 	});
 snippet xit "xit('should do', () => { ... })" b
-	xit('${1:}', () => {
+	xit('${1:}', () =>
+	{
 		${0:${VISUAL}}
 	});
 snippet bef "before(() => { ... })" b
-	before(() => {
+	before(() =>
+	{
 		${0:${VISUAL}}
 	});
 snippet befe "beforeEach(() => { ... })" b
-	beforeEach(() => {
+	beforeEach(() =>
+	{
 		${0:${VISUAL}}
 	});
 snippet aft "after(() => { ... })" b
-	after(() => {
+	after(() =>
+	{
 		${0:${VISUAL}}
 	});
 snippet afte "afterEach(() => { ... })" b
-	afterEach(() => {
+	afterEach(() =>
+	{
 		${0:${VISUAL}}
 	});
 snippet exp "expect(...)" b

@@ -1,30 +1,36 @@
 snippet des "Describe (js)"
-	describe('${1:description}', function() {
+	describe('${1:description}', function()
+	{
 		$0
 	});
 
 snippet it "it (js)"
-	it('${1:description}', function() {
+	it('${1:description}', function()
+	{
 		$0
 	});
 
 snippet bef "before each (js)"
-	beforeEach(function() {
+	beforeEach(function()
+	{
 		$0
 	});
 
 snippet aft "after each (js)"
-	afterEach(function() {
+	afterEach(function()
+	{
 		$0
 	});
 
 snippet befa "before all (js)"
-	beforeAll(function() {
+	beforeAll(function()
+	{
 		$0
 	});
 
 snippet afta "after all (js)"
-	afterAll(function() {
+	afterAll(function()
+	{
 		$0
 	});
 
@@ -35,7 +41,8 @@ snippet anyt "anything (js)"
 	jasmine.anything()
 
 snippet objc "object containing (js)"
-	jasmine.objectContaining({
+	jasmine.objectContaining(
+	{
 		${VISUAL}$0
 	});
 
@@ -46,7 +53,8 @@ snippet strm "string matching (js)"
 	jasmine.stringMatching("${1:matcher}")
 
 snippet ru "runs (js)"
-	runs(function() {
+	runs(function()
+	{
 		$0
 	});
 

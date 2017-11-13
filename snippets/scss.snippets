@@ -5,7 +5,8 @@ snippet $
 snippet imp
 	@import '${0}';
 snippet mix
-	@mixin ${1:name}(${2}) {
+	@mixin ${1:name}(${2})
+	{
 		${0}
 	}
 snippet inc
@@ -13,32 +14,40 @@ snippet inc
 snippet ext
 	@extend ${0};
 snippet fun
-	@function ${1:name}(${2:args}) {
+	@function ${1:name}(${2:args})
+	{
 		${0}
 	}
 snippet if
-	@if ${1:condition} {
+	@if ${1:condition}
+	{
 		${0}
 	}
 snippet ife
-	@if ${1:condition} {
+	@if ${1:condition}
+	{
 		${2}
-	} @else {
+	} @else
+	{
 		${0}
 	}
 snippet eif
-	@else if ${1:condition} {
+	@else if ${1:condition}
+	{
 		${0}
 	}
 snippet for
-	@for ${1:$i} from ${2:1} through ${3:3} {
+	@for ${1:$i} from ${2:1} through ${3:3}
+	{
 		${0}
 	}
 snippet each
-	@each ${1:$item} in ${2:items} {
+	@each ${1:$item} in ${2:items}
+	{
 		${0}
 	}
 snippet while
-	@while ${1:$i} ${2:>} ${3:0} {
+	@while ${1:$i} ${2:>} ${3:0}
+	{
 		${0}
 	}

@@ -21,7 +21,8 @@ snippet main
 	}
 snippet class
 	${1:public|internal} class ${2:name} ${0:extends } {
-		public function $2 (	) {
+		public function $2 (	)
+		{
 			("start");
 		}
 	}
@@ -33,7 +34,8 @@ snippet all
 			private|public| static var BAR = "abc";
 
 			// class initializer - no JIT !! one time setup
-			if Cababilities.os == "Linux|MacOS" {
+			if Cababilities.os == "Linux|MacOS"
+			{
 				FOO = "other";
 			}
 
@@ -49,7 +51,8 @@ snippet all
 		}
 	}
 
-	function A(){
+	function A()
+	{
 		// A can only be accessed within this file
 	}
 snippet switch
@@ -64,61 +67,76 @@ snippet case
 			${0}
 		break;
 snippet package
-	package ${1:package}{
+	package ${1:package}
+	{
 		${0}
 	}
 snippet wh
-	while ${1:cond}{
+	while ${1:cond}
+	{
 		${0}
 	}
 snippet do
-	do {
+	do
+	{
 		${0}
 	} while (${1:cond})
 snippet for enumerate names
-	for (${1:var} in ${2:object}){
+	for (${1:var} in ${2:object})
+	{
 		${0}
 	}
 snippet for enumerate values
-	for each (${1:var} in ${2:object}){
+	for each (${1:var} in ${2:object})
+	{
 		${0}
 	}
 snippet get_set
-	function get ${1:name} {
+	function get ${1:name}
+	{
 		return ${2}
 	}
-	function set $1 (newValue) {
+	function set $1 (newValue)
+	{
 		${0}
 	}
 snippet interface
-	interface name {
+	interface name
+	{
 		function method(${1}):${0:returntype};
 	}
 snippet try
-	try {
+	try
+	{
 		${1:${VISUAL}}
-	} catch (error:ErrorType) {
+	} catch (error:ErrorType)
+	{
 		${2}
-	} finally {
+	} finally
+	{
 		${0}
 	}
 # For Loop (same as c.snippet)
 snippet for for (..) {..}
-	for (${2:i} = 0; $2 < ${1:count}; $2${3:++}) {
+	for (${2:i} = 0; $2 < ${1:count}; $2${3:++})
+	{
 		${0}
 	}
 # Custom For Loop
 snippet forr
-	for (${1:i} = ${2:0}; ${3:$1 < 10}; $1${4:++}) {
+	for (${1:i} = ${2:0}; ${3:$1 < 10}; $1${4:++})
+	{
 		${0}
 	}
 # If Condition
 snippet if
-	if (${1:/* condition */}) {
+	if (${1:/* condition */})
+	{
 		${0:${VISUAL}}
 	}
 snippet el
-	else {
+	else
+	{
 		${0:${VISUAL}}
 	}
 # Ternary conditional

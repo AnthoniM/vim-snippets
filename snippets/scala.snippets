@@ -29,32 +29,38 @@ snippet eif
 		${0:${VISUAL}}
 #while loop
 snippet wh
-	while (${1:obj}) {
+	while (${1:obj})
+	{
 		${0:${VISUAL}}
 	}
 #for loop(classic)
 snippet for
-	for (${1:item} <- ${2:obj}) {
+	for (${1:item} <- ${2:obj})
+	{
 		${0}
 	}
 #for loop(indexed)
 snippet fori
-	for (${1:i} <- ${2:0} to ${3:obj}.length) {
+	for (${1:i} <- ${2:0} to ${3:obj}.length)
+	{
 		${0}
 	}
 #for comprehension
 snippet fory
-	for {
+	for
+	{
 		${1:item} <- ${2:obj}
 	} yield ${0}
 #exceptions
 snippet try
-	try {
+	try
+	{
 		${1:${VISUAL}}
 	} catch {
 		case e: FileNotFoundException => ${2}
 		case e: IOException => ${3}
-	} finally {
+	} finally
+	{
 		${0}
 	}
 #match
@@ -276,7 +282,8 @@ snippet object
 	object ${1:name}${2:(arg)}${3: extends }${4: with} ${0:}
 #trait
 snippet trait
-	trait ${1:name}${2: extends }${3: with} {
+	trait ${1:name}${2: extends }${3: with}
+	{
 		${0:}
 	}
 #class with trait Ordered(page 265)
@@ -304,28 +311,35 @@ snippet ensuring
 	ifel ensuring(${1:a}==${0:b})
 #expect
 snippet expect
-	expect(${1:what}) {
+	expect(${1:what})
+	{
 		${0}
 	}
 #intercept
 snippet intercept
-	intercept[${1:IllegalArgumentException}] {
+	intercept[${1:IllegalArgumentException}]
+	{
 		${0}
 	}
 #test
 snippet test
-	test("${1:description}") {
+	test("${1:description}")
+	{
 		${0}
 	}
 #suite
 snippet suite
-	class ${0:name} extends Suite {
-		def test() {
+	class ${0:name} extends Suite
+	{
+		def test()
+	{
 	}
 #funsuite
 snippet fsuite
-	class ${1:name} extends FunSuite {
-		test("${0:description}") {
+	class ${1:name} extends FunSuite
+	{
+		test("${0:description}")
+	{
 	}
 ############################
 # SBT
